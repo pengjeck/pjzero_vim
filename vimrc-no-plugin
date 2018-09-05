@@ -1,0 +1,83 @@
+"author: pjzero
+"email: pjwhusir@gmail.com
+
+" let backspace can delete
+set nocompatible
+set backspace=indent,eol,start
+
+" ==============
+" map keys
+" ==============
+let mapleader = ";"
+nmap <leader>w :w!<cr>
+nmap <leader>q :q<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>tn :tabnew<cr>
+nmap <leader>te :tabedit
+nmap <leader>tc :tabclose<cr>
+" =>Remove unwanted spaces
+map <leader>c :%s/\s\+$//<cr>
+
+" ==============
+" end of map keys
+" ==============
+
+
+" vim 命令行模式自动补全
+set wildmenu
+
+" tab line
+set showtabline=1
+
+" show matching bracets when text indicator is over them
+set showmatch
+
+" [color scheme]
+set background=light
+set t_Co=256
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+
+" syntax highlight on
+syntax on
+set encoding=utf-8
+set guifont=DejaVu\ Sans\ Mono\ 10
+
+"FileType support
+set filetype=on
+filetype plugin indent on
+
+" Highlight the screen line of the cursor with CursorLine
+set cursorline
+
+" Showing line numbers and length
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+
+" Useful settings
+set history=700
+set undolevels=700
+
+" Real programmers don't use TABs but spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set smarttab
+" set expandtab
+
+" Make search case insensitive
+set hlsearch
+set incsearch   " 实时搜索功能开启
+set ignorecase   " 搜索时忽略大小写
+set smartcase
+
+" Disable stupid backup and swap files - they trigger too many events
+" for file system watchers
+set nobackup
+set nowritebackup
+set noswapfile
+
+" 基本解决乱码的问题
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
